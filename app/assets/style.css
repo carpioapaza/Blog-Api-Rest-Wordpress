@@ -1,0 +1,141 @@
+body {
+  background: #d5dfe9;
+
+  overflow-x: hidden;
+}
+
+.error {
+  padding: 1em;
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background: #fa8072;
+}
+
+.header {
+  padding: 0 0.5rem;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background: #d5dfe9;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+  height: 3em;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9;
+  background: rgba(213, 223, 233, 0.603);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  color: rgb(135, 152, 250);
+}
+
+.header h1 > a {
+  font-size: 1.5rem;
+}
+
+.menu {
+  display: flex;
+  gap: 1em;
+  flex-grow: 1;
+  justify-content: center;
+  align-self: stretch;
+  align-items: center;
+}
+.menu a {
+  position: relative;
+}
+.menu a::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: rgb(135, 152, 250);
+  transform: translateY(0.9rem);
+  display: none;
+  transition: all 0.5s;
+}
+.menu a:hover::after {
+  display: block;
+}
+
+.search-form input {
+  padding: 0.5rem;
+  outline: 1px solid rgb(135, 152, 250);
+  border-radius: 1rem;
+  background: rgba(213, 223, 233, 0.603);
+  backdrop-filter: blur(6px);
+}
+
+.loader {
+  margin: 1rem auto;
+  display: block;
+  width: 4em;
+  height: 4em;
+}
+
+.main {
+  background-color: seagreen;
+}
+.grid-fluid {
+  padding: 4em;
+  display: grid;
+  max-width: 90%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: auto;
+  gap: 1rem;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+  backdrop-filter: blur(12.5px);
+}
+.post-card-header {
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.14);
+  transition: all 0.1s;
+}
+.post-card:hover {
+  transform: rotateZ(1deg);
+  z-index: 99;
+}
+
+.post-card:hover .post-card-body > p > a {
+  text-decoration: underline;
+  text-decoration-color: rgb(135, 152, 250);
+  padding-right: 1rem;
+}
+.post-card-body a {
+  transition: all 0.3s;
+}
+.post-card img {
+  border-radius: 1rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.post-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  justify-content: space-between;
+  align-content: space-between;
+  color: rgb(63, 63, 63);
+  padding: 0.5rem;
+}
+.post-card p {
+  color: rgb(97, 97, 97);
+  display: flex;
+  justify-content: space-between;
+}
